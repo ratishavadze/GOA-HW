@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Function Examples</title>
+</head>
+<body>
+
+    <h1>JavaScript ფუნქციების მაგალითი</h1>
+
+    <input type="number" id="minutesInput" placeholder="შეიყვანე წუთები">
+    <button onclick="convertMinutesToSeconds()">წამებში გადაყვანა</button>
+    <p id="secondsOutput"></p>
+    <br><br>
+
+    <input type="number" id="num1" placeholder="პირველი რიცხვი">
+    <input type="number" id="num2" placeholder="მეორე რიცხვი">
+    <input type="number" id="num3" placeholder="მესამე რიცხვი">
+    <button onclick="calculateExpression()">გამოთვლა</button>
+    <p id="expressionOutput"></p>
+    <br><br>
+
+    <input type="number" id="compareNum1" placeholder="პირველი რიცხვი">
+    <input type="number" id="compareNum2" placeholder="მეორე რიცხვი">
+    <button onclick="isGreater()">შედარება</button>
+    <p id="comparisonOutput"></p>
+
+    <script>
+        function convertMinutesToSeconds() {
+            const minutes = parseInt(document.getElementById("minutesInput").value);
+            const seconds = minutesToSeconds(minutes);
+            document.getElementById("secondsOutput").innerText = `წამები: ${seconds}`;
+        }
+
+        function minutesToSeconds(minutes) {
+            return minutes * 60;
+        }
+
+        function calculateExpression() {
+            const num1 = parseInt(document.getElementById("num1").value);
+            const num2 = parseInt(document.getElementById("num2").value);
+            const num3 = parseInt(document.getElementById("num3").value);
+            const result = (num1 + num2) * num3;
+            document.getElementById("expressionOutput").innerText = `შედეგი: ${result}`;
+        }
+
+        function isGreater() {
+            const compareNum1 = parseInt(document.getElementById("compareNum1").value);
+            const compareNum2 = parseInt(document.getElementById("compareNum2").value);
+            const result = compareNum1 > compareNum2;
+            document.getElementById("comparisonOutput").innerText = `შედეგი: ${result}`;
+        }
+    </script>
+</body>
+</html>

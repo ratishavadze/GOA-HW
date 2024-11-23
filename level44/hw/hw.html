@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+</head>
+<body>
+
+    <h1>JavaScript ფუნქციების მაგალითი</h1>
+
+    <button onclick="sayHello()">გამარჯობა</button>
+    <br><br>
+    <input type="text" id="nameInput" placeholder="შეიყვანე სახელი">
+    <button onclick="greetWithName()">მოესალმე</button>
+    <p id="greeting"></p>
+    <br><br>
+    <input type="number" id="numberInput" placeholder="შეიყვანე რიცხვი">
+    <button onclick="incrementNumber()">ერთით მეტი</button>
+    <p id="incrementedNumber"></p>
+
+    <script>
+        function sayHello() {
+            console.log("გამარჯობა");
+        }
+
+        function greetWithName() {
+            const name = document.getElementById("nameInput").value;
+            document.getElementById("greeting").innerText = `გამარჯობა, ${name}`;
+        }
+
+        function incrementNumber() {
+            const number = parseInt(document.getElementById("numberInput").value);
+            const incremented = addOne(number);
+            document.getElementById("incrementedNumber").innerText = `ერთით მეტი: ${incremented}`;
+        }
+
+        function addOne(num) {
+            return num + 1;
+        }
+    </script>
+</body>
+</html>

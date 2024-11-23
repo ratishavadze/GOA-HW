@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions Display</title>
+    <style>
+        .positions-list {
+            font-family: Arial, sans-serif;
+            color: black;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <h2>Position List</h2>
+    <ul id="positionsList" class="positions-list"></ul>
+
+    <script>
+        function printPositions(rows, cols) {
+            const list = document.getElementById("positionsList");
+            for (let row = 1; row <= rows; row++) {
+                for (let col = 1; col <= cols; col++) {
+                    const listItem = document.createElement("li");
+                    listItem.textContent = `row: ${row}, col: ${col}`;
+                    list.appendChild(listItem);
+                }
+            }
+        }
+        printPositions(2, 2);
+    </script>
+</body>
+</html>

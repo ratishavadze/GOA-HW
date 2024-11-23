@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.shape {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 10%;
+}
+
+.square {
+    background-color: #ff6b6b;
+}
+
+.circle {
+    background-color: #ff9f43;
+    border-radius: 50%;
+}
+
+.rectangle {
+    background-color: #38ada9;
+    width: 100px;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 80px solid #54a0ff;
+    box-shadow: none;
+}
+
+.pentagon {
+    position: relative;
+    background-color: #1dd1a1;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.ellipse {
+    background-color: #ff9f43;
+    width: 100px;
+    border-radius: 50% / 40%;
+}
+
+.star {
+    background-color: #8395a7;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.crescent {
+    background-color: #ff6b6b;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.crescent::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 80px;
+    background-color: #f4f4f4;
+    border-radius: 50%;
+    top: 0;
+    left: 20px;
+}
+
+.heart {
+    background-color: #ff9f43;
+    clip-path: polygon(50% 0%, 100% 37%, 80% 100%, 50% 75%, 20% 100%, 0% 37%);
+}

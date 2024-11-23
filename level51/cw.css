@@ -1,0 +1,9 @@
+body.light {
+    background-color: white;
+    color: white;
+}
+
+body.dark {
+    background-color: black;
+    color: black;
+}

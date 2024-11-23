@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Customizer</title>
+  <style>
+    #textElement {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Text Customizer</h1>
+  
+  <input type="text" id="textInput" placeholder="ტექსტი">
+  <button onclick="addText()">ტექსტის დამატება</button>
+  <br><br>
+  
+  <input type="color" id="colorInput" value="#000000">
+  <button onclick="changeColor()">ფერის შეცვლა</button>
+  <br><br>
+  
+  <input type="number" id="sizeInput" placeholder="ზომა (px)" min="10">
+  <button onclick="changeSize()">ზომის შეცვლა</button>
+  <br><br>
+  
+  <div id="textElement">აქ გამოჩნდება თქვენი ტექსტი</div>
+  
+  <script>
+    function addText() {
+      const text = document.getElementById('textInput').value;
+      document.getElementById('textElement').innerText = text;
+    }
+
+    function changeColor() {
+      const color = document.getElementById('colorInput').value;
+      document.getElementById('textElement').style.color = color;
+    }
+
+    function changeSize() {
+      const size = document.getElementById('sizeInput').value;
+      document.getElementById('textElement').style.fontSize = size + 'px';
+    }
+  </script>
+</body>
+</html>

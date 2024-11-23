@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+        }
+        td, th {
+            border: 1px solid brown;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Multiplication Table (1-10)</h2>
+    <table id="multiplicationTable"></table>
+
+    <script>
+        function createMultiplicationTable() {
+            const table = document.getElementById("multiplicationTable");
+            for (let i = 1; i <= 10; i++) {
+                const row = document.createElement("tr");
+                for (let j = 1; j <= 10; j++) {
+                    const cell = document.createElement("td");
+                    cell.textContent = i * j;
+                    row.appendChild(cell);
+                }
+                table.appendChild(row);
+            }
+        }
+
+        // გამოძახება
+        createMultiplicationTable();
+    </script>
+</body>
+</html>
