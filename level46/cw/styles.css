@@ -1,0 +1,56 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+}
+
+/* Card Styling */
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+}
+
+/* Profile Picture */
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px auto;
+    display: block;
+    border: 3px solid #ff758c;
+}
+
+/* Title */
+.title {
+    color: gray;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Social Links */
+.social-links a {
+    text-decoration: none;
+    color: #ff758c;
+    margin: 0 5px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ff4a70;
+}
